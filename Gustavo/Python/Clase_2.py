@@ -1,4 +1,3 @@
-"""
 # Ejercicio 1
 
 edad = int(input("Ingrese su edad: "))
@@ -62,11 +61,50 @@ elif Estrato == 2 and Edad < 18:
 elif Estrato == 2 and Edad >= 18:
     print("Su matricula le queda en: " , Matricula * 0.5 )
     
-"""
-
 # Ciclo WHILE
 
 x = 5
 while x <= 50:
     print("5 x", x//5, "=", x)
     x +=5
+
+# Para terminar, ejercicio 7
+
+numero = int(input("Ingrese el último dígito de la placa del automóvil: "))
+
+color = ""
+
+while color == "":
+    if  numero == 1 or  numero  == 2:
+        color = "Amarillo"
+    elif  numero  == 3 or  numero  == 4:
+        color = "Rosa"
+    elif  numero  == 5 or  numero  == 6:
+        color = "Roja"
+    elif  numero  == 7 or  numero  == 8:
+        color = "Verde"
+    elif  numero  == 9 or  numero  == 0:
+        color = "Azul"
+print("El color de la calcomanía es:", color)
+
+for x in range (1, 11):
+     print("1 x", x, "=", 1 * x)
+
+
+for Tabla in range (1, 11):  # for es un bucle - nombre de variable - range - (parametros)
+    for x in range (1, 11):
+        c=Tabla*x
+        print(Tabla , "x" , x, "=" , c)
+    print("=====================\n")
+
+
+
+x = 1
+while x <= 10:
+    print("1 x", x, "=", 1 * x)
+    x += 1
+
+x = 1
+while x <= 10:
+    print("10 x", x, "=", 10 * x)
+    x += 1
