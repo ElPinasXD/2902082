@@ -1,5 +1,176 @@
-# Ejercicios mios en el computador
+# 1 
 
+Dinero = float(input("Cuánto dinero va a ingresar: "))
+Tasa_Interes = float(input("A cuánto la tasa de interés anual: ")) / 100
+Años = int(input("Por cuántos años hará la inversión: "))
+
+Inversion = round(Dinero * (1 + Tasa_Interes) ** Años, 2) # Para redondiar en 2 numeros después de la coma 
+print("La inversion inicial es de:" , Inversion)
+
+Interes = Inversion - Dinero
+if Interes >= 7000 / 100:
+    Inversion += Interes
+    print("Después de reinvertir los intereses, el total de dinero en su cuenta es:", round(Inversion, 2))
+else:
+    print("Gracias por su inversión")
+
+
+# 2 
+
+numeros = [float(input("Ingrese nota: ".format(i))) for i in range(1, 4)] # i = el rango que le limita (1,3)
+Promedio = sum(numeros) // 3
+
+if Promedio >= 7.0:
+    print("El alumno ha aprobado el curso con un promedio de:", Promedio)
+else:
+    print("El alumno ha reprobado el curso con un promedio de:", Promedio)
+
+
+# 3
+
+Horas = int(input("Ingrese cuantas horas trabajo:"))
+Hora_Extra = input("¿Ha echo horas extra?:").lower()  # Convertir la entrada a minúsculas para evitar sensibilidad a mayúsculas
+if Hora_Extra == "si":
+    Cuantas = int(input("¿Cuántas horas extra hizo?: "))
+    if Horas <= 40:
+        salario = print("Su salario es:" , Horas * 40000 + Cuantas * 30000)
+    else:
+        salario = print("Su salario es:" ,  40 * 60000 + (Horas - 40) * 30000 + Cuantas * 30000)
+elif Hora_Extra == "no":
+    if Horas <= 40:
+        salario = print("Su salario es:" , Horas * 40000)
+    else:
+        salario = print("Su salario es:" , 40 * 60000)
+else:
+    print("Respuesta no válida. Por favor ingrese 'si' o 'no'.")
+
+
+# 4
+numeros = [int(input("Ingrese número {}: ".format(i))) for i in range(1, 4)]
+print(sorted(numeros))
+
+
+# 5
+
+Llantas = int(input("Cuantas llantas va a comprar: "))
+
+if Llantas < 5:
+    print("Le quedaria en:" , 800 * Llantas)
+else:
+    print("Le quedaria en:" ,  700 * Llantas)
+
+# 6 
+
+Puntos = [int(input("Ingrese los puntos IMECA del día {}: ".format(dia))) for dia in range(1, 6)]
+
+Promedio = sum(Puntos) // 5
+print(Promedio)
+
+if Promedio > 170:
+    print("Detenida la producción por una semana y multa del 50% de las ganancias diarias")
+    ganancias_diarias = int(input("Ingrese las ganancias diarias de la fábrica: "))
+    multa = 0.5 * ganancias_diarias * 7 
+    print("La multa a pagar es:", multa)
+else:
+    print("Sigan")
+
+
+# 7
+
+Tiempo = int(input("Cuanto años lleva en la empresa: "))
+Salario = int(input("Cuanto gana: "))
+
+if Tiempo < 1:
+    print("Su salario es: " ,  Salario * 0.05)
+else:
+    if Tiempo >= 1 and Tiempo < 2:
+        print("Su salario es:" , Salario * 0.07)
+    elif Tiempo >= 2 and Tiempo <= 5:
+        print("Su salario es:" , Salario * 0.1)
+    elif Tiempo >= 5 and Tiempo <= 10:
+        print("Su salario es:" , Salario * 0.15)
+    elif Tiempo >= 10:
+        print("Su salario es:" , Salario * 0.20)
+
+
+# 8
+
+import random
+
+Producto = str(input("Cual es su producto:"))
+Precio = int(input("A cuanto esta:"))
+
+Ball_White = Precio
+Ball_Green = 0.10 * Precio
+Ball_Yellow = 0.25 * Precio
+Ball_Blue = 0.50 * Precio
+Ball_Red = "Gratis"
+
+opciones = [("Blanca", Ball_White), ("Verde", Ball_Green), ("Amarilla", Ball_Yellow), ("Azul", Ball_Blue), ("Roja", Ball_Red)]
+
+i = random.choice(opciones)
+nombre_pelota, valor_pelota = i
+
+print("La pelota que salio fue:", nombre_pelota)
+
+print("Su" , Producto , "le queda en" , valor_pelota)
+
+# 9
+
+edad_persona = int(input("Ingrese la edad de la persona: "))
+antiguedad_empleo_persona = int(input("Ingrese la antigüedad en años de la persona en su empleo: "))
+
+def clasificar_jubilacion(edad, antiguedad_empleo):
+    if edad >= 60 and antiguedad_empleo < 25:
+        return "Jubilación por Edad"
+    elif edad < 60 and antiguedad_empleo >= 25:
+        return "Jubilación por Antigüedad Joven"
+    elif edad >= 60 and antiguedad_empleo >= 25:
+        return "Jubilación por Antigüedad Adulta"
+    else:
+        return "No cumple requisitos de jubilación"
+
+tipo_jubilacion = clasificar_jubilacion(edad_persona, antiguedad_empleo_persona)
+print("La persona queda adscrita a la jubilación:", tipo_jubilacion)
+
+# 10
+
+def verificar_anemia(edad, sexo, nivel_hemoglobina):
+    if edad <= 0:  # Menos de un año
+        if nivel_hemoglobina < 13 or nivel_hemoglobina > 26:
+            return "Positivo"
+    elif edad <= 1:  # 1 año o más
+        if nivel_hemoglobina < 12 or nivel_hemoglobina > 16:
+            return "Positivo"
+    elif edad <= 5:  # > 1 y <= 5 años
+        if nivel_hemoglobina < 11.5 or nivel_hemoglobina > 15:
+            return "Positivo"
+    elif edad <= 10:  # > 5 y <= 10 años
+        if nivel_hemoglobina < 12.6 or nivel_hemoglobina > 15.5:
+            return "Positivo"
+    elif edad <= 15:  # > 10 y <= 15 años
+        if nivel_hemoglobina < 13 or nivel_hemoglobina > 15.5:
+            return "Positivo"
+    elif sexo == "mujer" and edad > 15:  # mujeres > 15 años
+        if nivel_hemoglobina < 12 or nivel_hemoglobina > 16:
+            return "Positivo"
+    elif sexo == "hombre" and edad > 15:  # hombres > 15 años
+        if nivel_hemoglobina < 14 or nivel_hemoglobina > 18:
+            return "Positivo"
+    
+    return "Negativo"
+
+edad_input = input("Ingrese la edad de la persona (si es mes, porfavor _ mes): ")
+if "mes" in edad_input:
+    edad = int(edad_input.split()[0]) / 12  # Convertir meses a años
+else:
+    edad = int(edad_input)
+
+sexo = input("Ingrese el sexo de la persona (mujer/hombre): ").lower()
+nivel_hemoglobina = float(input("Ingrese el nivel de hemoglobina de la persona (en g%): "))
+
+resultado = verificar_anemia(edad, sexo, nivel_hemoglobina)
+print("El resultado es:", resultado)
 
 
 # CICLOS 
@@ -72,6 +243,7 @@ calificacion_mas_baja = min(calificaciones)
 print(f"La calificación media del grupo es:" ,calificacion_media)
 print(f"La calificación más baja del grupo es:" , calificacion_mas_baja)
 
+
 4
 
 numero = int(input("Introduce un número a multiplicar: "))
@@ -80,6 +252,7 @@ print("Tabla de multiplicar del" ,numero ,":")
 for multiplicador in range(1, 11):
     producto = numero * multiplicador
     print(numero, "x",multiplicador, "=" , producto)
+
 
 5
 
