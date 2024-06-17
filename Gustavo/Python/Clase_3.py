@@ -1,4 +1,4 @@
-""" 1 ejercicio
+#1 ejercicio
 
 lista = (2,3,56,4,8)
 print("El numero mas grande entre" , lista , "es:" , max(lista))
@@ -38,6 +38,8 @@ for elemento in repetir:
 # Imprimimos los recuentos
 for elemento, contador in recuentos.items():
     print("El elemento", elemento, "aparece", contador, "veces en la lista.")
+
+
 
 # 4 ejercicio 
 
@@ -81,7 +83,7 @@ for x in range(1,Numero+1):
 for x, Resultado in cuadrado.items():
     print( x, "->" , Resultado)
 
-"""
+
 
 # 9 ejercicio - Falta
 
