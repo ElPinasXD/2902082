@@ -1,0 +1,81 @@
+*{                      
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+img{
+
+    width: 120px;
+    height: 115px;
+    position: relative;
+    top: 10px;
+    left: 80px;
+
+}
+
+
+.Form{
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    right: 80px; 
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.Form:hover{
+
+    background-color: rgb(167, 165, 165);
+    color: white;
+    transition: 0.5s;
+}
+
+
+.Login{
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    right: 182px;
+    cursor: pointer;
+    transition: 0.5s; 
+
+}
+
+.Login:hover{
+
+    background-color: rgb(167, 165, 165);
+    color: white;
+    transition: 0.5s;
+
+}
+
+
+
+
+
+
+
+footer{
+
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(187, 182, 182);
+    position: absolute;
+    bottom: 0;
+
+}

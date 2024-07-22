@@ -1,0 +1,61 @@
+body{
+
+    background-color: rgb(219, 219, 219);
+}
+
+form{
+
+    margin: auto;
+    padding: 11px;
+    margin-top: 140px;
+    border-radius: 15px;
+    background: rgb(110, 107, 107);
+    color: #ffffff;
+    width: 330px;
+    height: 500px;
+    text-align: center;
+
+}
+
+h1{
+
+    font-size: 40px;
+
+}
+
+h2{
+
+    font-size: 20px;
+    margin-top: 25px;
+
+}
+
+
+/* Aplica el mismo estilo para todos los inputs */
+input{ 
+
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 10px;
+    width: 89%;
+    
+}
+
+/* Para quitar las flechas del input type="number" */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="submit"]{
+
+    margin-top: 20px;
+    background-color: rgb(221, 214, 214);
+    padding: 8px;
+    border-radius: 10px;
+    width: 89%;
+    
+}

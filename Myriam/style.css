@@ -1,0 +1,92 @@
+/* Estilos generales para todo el documento */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #252222;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+#logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 150px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+main {
+    margin-top: 10%; /* Ajuste para evitar que el contenido se superponga con el encabezado */
+    padding: 20px;
+    max-height: fit-content;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+section p {
+    color: #383737;
+    line-height: 1.5;
+}
+
+ol {
+
+    list-style-type: none;
+    padding: 0;
+}
+
+ol li {
+
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    left: 0%;
+    position: absolute;
+    top: auto;
+    width: 100%;
+}
+
+
+/* Estilos específicos para enlaces dentro de listas */
+
+ol li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
