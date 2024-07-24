@@ -1,0 +1,54 @@
+Pagina de Conexion.json
+
+Creacion de una tabla llamada "Categoria"
+Creamos registros con sus parametros
+
+{
+
+"Categoria" : [
+    {
+        "ID" : 123,
+        "Nombre" : "Bebidas"  
+    },
+    {
+        "ID" : 456,
+        "Nombre" : "Ensaladas"
+    },
+    {
+        "ID" : 789,
+        "Nombre" : "Enlatados"
+
+    }
+], 
+"Productos" : [
+    {
+        "ID" : 1,
+        "Nombre" : "Coca-Cola",
+        "Precio" : 2000,
+        "Cantidad" : "10",
+        "CategoriaID" : 123
+    },
+    {
+        "ID" : 2,
+        "Nombre" : "Atun",
+        "Precio" : 1000,
+        "Cantidad" : "54",
+        "CategoriaID" : 789
+    }
+]
+
+}
+
+Pagina package.json
+
+Se creo un scripts para establecer la Conexion con la informacion del servidor
+
+{
+  "dependencies": {
+    "json-server": "^1.0.0-beta.1"
+
+  },
+  "scripts": {
+    "start-api": "json-server --watch Conexion.json --port 4000"
+  }
+}

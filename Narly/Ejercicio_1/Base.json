@@ -1,0 +1,92 @@
+{
+  "User": [
+    {
+      "id": "1",
+      "tipodoc": "Cédula Ciudadanía",
+      "numdoc": "1234567890",
+      "nombre": "Mario Alberto",
+      "apellido": "Yepes Caicedo",
+      "fnacimiento": "1982-06-25",
+      "email": "marioyepes@gmail.com",
+      "password": "qwerty"
+    },
+    {
+      "id": "2",
+      "tipodoc": "Pasaporte",
+      "numdoc": "198765432",
+      "nombre": "Laura María",
+      "apellido": "Esguerra Cortés",
+      "fnacimiento": "1987-03-15",
+      "email": "lauraesguerra@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "3",
+      "tipodoc": "Tarjeta de Identidad",
+      "numdoc": "1247392046",
+      "nombre": "Carlos Mario",
+      "apellido": "Mojicas Rojas",
+      "fnacimiento": "1900-02-01",
+      "email": "carlitosgomez@hotmail.com",
+      "password": "amazon123"
+    }
+  ],
+  "Habitacion": [
+    {
+      "id": "101",
+      "nombrehab": "Suite Deluxe",
+      "capacidad": 3,
+      "camas": 2,
+      "caracteristicas": "2 camas: 1 doble 1 sencilla y baño privado",
+      "valornoche": 125000
+    },
+    {
+      "id": "102",
+      "nombrehab": "Suite Basic",
+      "capacidad": 2,
+      "camas": 1,
+      "caracteristicas": "1 cama doble y baño privado",
+      "valornoche": 100000
+    },
+    {
+      "id": "103",
+      "nombrehab": "Suite VIP",
+      "capacidad": 5,
+      "camas": 4,
+      "caracteristicas": "4 camas: 2 dobles 2 sencillas y 2 baños privados",
+      "valornoche": 200000
+    }
+  ],
+  "Reservas": [
+    {
+      "id": "1",
+      "fechareserva": "2022-07-07",
+      "fechaentrada": "2022-08-22",
+      "fechasalida": "2022-08-26",
+      "totalnoches": 5,
+      "valorreserva": 625000,
+      "userId": 1,
+      "habitacionId": 101
+    },
+    {
+      "id": "2",
+      "fechareserva": "2022-04-07",
+      "fechaentrada": "2022-08-20",
+      "fechasalida": "2022-08-21",
+      "totalnoches": 2,
+      "valorreserva": 300000,
+      "userId": 2,
+      "habitacionId": 102
+    },
+    {
+      "id": "3",
+      "fechareserva": "2020-02-06",
+      "fechaentrada": "2020-10-20",
+      "fechasalida": "2020-10-30",
+      "totalnoches": 1,
+      "valorreserva": 10000,
+      "userId": 3,
+      "habitacionId": 103
+    }
+  ]
+}
