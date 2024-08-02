@@ -3,7 +3,7 @@
 Encapsulacion = es ocultar la complejidad interna de un objeto y exponer 
 solamente una interfaz pública que permita interactuar con él
 
-sobrecarga = hace referencia a la capacidad de tener el mismo método definido más 
+Sobrecarga = hace referencia a la capacidad de tener el mismo método definido más 
 de una vez en una clase pero con diferentes cantidades o tipos de parámetros
 
 
@@ -24,7 +24,6 @@ class Operaciones:
     return sum(args)
 
 
-###############################
 print (Operaciones.sumar(3, 4))
 print (Operaciones.sumar(4.5, 3.2))
 print (Operaciones.sumar(3 ,4, 8, 10, 12))
@@ -34,6 +33,7 @@ print (Operaciones.sumar(3,2,43))
 
 
 # 1 Ejercicio 
+
 class CuentaBancaria:
     def __init__(self, numero_cuenta, titular, saldo, moneda):
         self.__numero_cuenta = numero_cuenta
